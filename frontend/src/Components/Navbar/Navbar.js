@@ -1,6 +1,6 @@
 import {useCallback, useEffect, useLayoutEffect, useState} from 'react'
 import Paths, {navListForAdmin, navListForSeller, profileList} from './Path'
-import NavbarFooterLogo from '../../Images/logo-sm.svg'
+import NavbarFooterLogo from '../../Images/logo.png'
 import Avatar from '../Avatar/Avatar'
 import {IoChevronBack, IoEllipsisVertical} from 'react-icons/io5'
 import ProfileMenuLink from './ProfileMenuLink'
@@ -149,7 +149,7 @@ function Navbar() {
                         <Language />
                     </div>
                     <div className='footer-logo flex items-center justify-center'>
-                        <img src={NavbarFooterLogo} alt='alo24 logo' />
+                        <img src={NavbarFooterLogo} style={{height: "100px"}} alt='alo24 logo' />
                     </div>
                     <p className={'text-[0.625rem] text-black-500'}>
                         Copyright © 2022 Alo 24. All Rights Reserved

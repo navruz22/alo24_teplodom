@@ -96,22 +96,22 @@ module.exports.register = async (req, res) => {
 
 module.exports.editUser = async (req, res) => {
   try {
-    const { error } = validateEditUser(req.body);
-    if (error) {
-      return res.status(400).json({
-        error: error.message,
-      });
-    }
+    // const { error } = validateEditUser(req.body);
+    // if (error) {
+    //   return res.status(400).json({
+    //     error: error.message,
+    //   });
+    // }
 
-    const { _id, password, market } = req.body;
+    const { _id, password } = req.body;
 
-    const marke = await Market.findById(market);
-    if (!marke) {
-      return res.status(400).json({
-        message:
-          "Diqqat! Foydalanuvchi ro'yxatga olinayotgan do'kon dasturda ro'yxatga olinmagan.",
-      });
-    }
+    // const marke = await Market.findById(market);
+    // if (!marke) {
+    //   return res.status(400).json({
+    //     message:
+    //       "Diqqat! Foydalanuvchi ro'yxatga olinayotgan do'kon dasturda ro'yxatga olinmagan.",
+    //   });
+    // }
 
     const hashPassword = await bcrypt.hash(password, 8);
     await User.findByIdAndUpdate(_id, {

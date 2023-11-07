@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Logo from '../../Images/logo-lg.svg'
+import Logo from '../../Images/logo.png'
 import Input from '../../Components/Inputs/Input'
 import { clearError, signIn } from './loginSlice'
 import { useDispatch, useSelector } from 'react-redux'
@@ -50,6 +50,7 @@ function Login() {
                         <img
                             src={Logo}
                             className={'w-full pointer-events-none'}
+                            style={{height: "150px"}}
                             alt='Alo24 logo'
                         />
                     </div>

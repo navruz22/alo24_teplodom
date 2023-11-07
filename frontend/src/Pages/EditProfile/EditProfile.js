@@ -93,7 +93,7 @@ function EditProfile() {
                 market: currentUser.market,
                 password: currentUser.newPassword.replace(/\s+/g, ' ').trim(),
                 login: currentUser.newLogin.replace(/\s+/g, ' ').trim(),
-                image: currentUser.image.replace(/\s+/g, ' ').trim(),
+                // image: currentUser.image.replace(/\s+/g, ' ').trim(),
                 firstname: currentUser.firstname.replace(/\s+/g, ' ').trim(),
                 lastname: currentUser.lastname.replace(/\s+/g, ' ').trim()
             }
